@@ -1,3 +1,4 @@
+import { Carte } from './models/carte.models';
 import { Component, signal } from '@angular/core';
 import { bindCallback } from 'rxjs';
 import { PlayingCard } from './components/playing-card/playing-card';
@@ -12,4 +13,12 @@ import { PlayingCard } from './components/playing-card/playing-card';
 })
 export class App {
 
+  carte1!: Carte;
+
+  constructor() {
+    this.carte1 = new Carte();
+    this.carte1.name = "Roi";
+    this.carte1.valueP = 13;
+    this.carte1.description = "Le roi de carreau";
+  }
 }

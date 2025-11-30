@@ -1,9 +1,14 @@
 <div id="card">
     <div id="inside">
         <header>
-            <div class="Name">
+            <div class="left">
                 <div id="name">
-                    ROI
+                    {{carte.name}}
+                </div>
+            </div>
+            <div class="right">
+                <div id="valueP">
+                    {{carte.valueP}}
                 </div>
             </div>
         </header>
@@ -11,7 +16,7 @@
             <img src="assets/img/CarreauRoi.png" alt="Image de la carte du roi de carreau">
         </figure>
         <div class="description">
-            Carte du roi de carreau
+            {{carte.description}}
         </div>
     </div>
 </div>
