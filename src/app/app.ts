@@ -1,12 +1,15 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { bindCallback } from 'rxjs';
+import { PlayingCard } from './components/playing-card/playing-card';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [PlayingCard],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
 export class App {
-  protected readonly title = signal('playing-cards');
+
 }
