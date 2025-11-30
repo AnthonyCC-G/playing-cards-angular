@@ -19,6 +19,13 @@ header {
     margin-bottom: 10px;
 }
 
+
+.left, .right {
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+
 .Name {
     width: 100%;
 }
@@ -29,6 +36,13 @@ header {
     font-weight: bold;
     color: red;
     margin-bottom: 10px;
+}
+
+
+.right{
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
 figure#art {
