@@ -1,5 +1,5 @@
 import { Carte } from './../../models/carte.models';
-import { Component, Input, input, inputBinding } from '@angular/core';
+import { Component, Input, input, inputBinding, InputSignal } from '@angular/core';
 
 @Component({
   selector: 'app-playing-card',
@@ -9,12 +9,18 @@ import { Component, Input, input, inputBinding } from '@angular/core';
 })
 
 export class PlayingCard {
-  @Input({
-    alias: 'my-pcard',
-    transform: (value: Carte) => {
-      value.valueP =value.valueP / 2;
-      return value;
+  // @Input({
+  //   alias: 'my-pcard',
+  //   transform: (value: Carte) => {
+  //     value.valueP =value.valueP / 2;
+  //     return value;
+  //     }
+  //   }) 
+    carte: InputSignal<Carte> = input(new Carte(), {
+      alias: 'my-pcard',
+      transform: (value: Carte)=> {
+        value.valueP =value.valueP / 2;
+        return value;
       }
-    }) 
-    carte: Carte = new Carte();
+    });
 }
